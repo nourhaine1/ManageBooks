@@ -34,7 +34,6 @@
 <table class="table" id="tableBooks">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">Name </th>
       <th scope="col">Author Name</th>
       <th scope="col">Category</th>
@@ -43,7 +42,18 @@
     </tr>
   </thead>
   <tbody>
-   
+   <tr  *ngFor ="let book of data">
+    <td>{{ book.bookName }}</td>
+    <td>{{ book.author }}</td>
+    <td>{{ book.categoryName }}</td>
+    <td>{{ book.price }}</td>
+    <td>
+      <button type="button" class="btn btn-danger" (click)="deleteBook(book)"> Delete</button>
+    </td>
+ 
+    
+
+   </tr>
   </tbody>
 </table>
   </div>
